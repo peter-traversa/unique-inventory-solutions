@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/peter-traversa/unique-inventory-solutions/issues"
   },
-  "homepage": "https://github.com/peter-traversa/unique-inventory-solutions#readme"
+  "homepage": "https://github.com/peter-traversa/unique-inventory-solutions#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
