@@ -6,4 +6,4 @@ const path = require('path');
 app.use(express.static('build'));
 app.get('/', (req, res) => res.sendFile('index.html', { root: path.join(__dirname, './build')}));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port ${port}...`));
