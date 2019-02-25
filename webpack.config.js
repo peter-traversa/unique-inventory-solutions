@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import LiveReloadPlugin from 'webpack-livereload-plugin';
 
 export default {
   entry: './index.js',
@@ -8,7 +9,18 @@ export default {
     filename: 'bundle.js'
   },
   module: {
-    rules: [... ]
+    rules: [
+      {
+        use: 'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules
+      }
+    ]
   },
-  plugins: [..]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    }),
+    new LiveReloadPlugin()
+  ]
 };
