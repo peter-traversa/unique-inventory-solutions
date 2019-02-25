@@ -1,22 +1,14 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
-  entry: './src/index.js',
+export default {
+  entry: './index.js',
   output: {
-    path: __dirname + '/dist',
+    path: '/',
     filename: 'bundle.js'
   },
-  module:{
-    rules:[{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader'
-    }]
+  module: {
+    rules: [... ]
   },
-  plugins: [
-    new HtmlWebpackPlugin(
-      {template: path.join(__dirname,'/src/index.html')}
-    )
-  ]
+  plugins: [..]
 };
