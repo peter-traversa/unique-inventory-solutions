@@ -1,9 +1,9 @@
-const express = require('express');
+import express from 'express';
+import webpackMiddleware from 'webpack-dev-middleware';
+import webpack from 'webpack';
+import webpackConfig from './webpack.config.js';
 const app = express();
 const port = 3000;
-const path = require('path');
 
-app.use(express.static('build'));
-app.get('/', (req, res) => res.sendFile('index.html', { root: path.join(__dirname, './build')}));
-
+app.use(webpackMiddleware(webpack(webpackConfig)));
 app.listen(port, () => console.log(`Listening on port ${port}...`));

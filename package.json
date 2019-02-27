@@ -24,6 +24,7 @@
     "express": "^4.16.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "webpack-dev-middleware": "^3.6.0",
     "webpack-livereload-plugin": "^2.2.0"
   },
   "devDependencies": {

@@ -3,9 +3,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import LiveReloadPlugin from 'webpack-livereload-plugin';
 
 export default {
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
-    path: '/',
+    path: './build/',
     filename: 'bundle.js'
   },
   module: {
@@ -13,13 +13,13 @@ export default {
       {
         use: 'babel-loader',
         test: /\.js$/,
-        exclude: /node_modules
+        exclude: /node_modules/
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './src/index.html'
     }),
     new LiveReloadPlugin()
   ]
