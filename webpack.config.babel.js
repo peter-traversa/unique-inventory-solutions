@@ -1,11 +1,13 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import LiveReloadPlugin from 'webpack-livereload-plugin';
+const path = require('path');
 
 export default {
-  entry: './src/index.js',
+  entry: path.join(__dirname, '/src/index.js'),
+  mode: 'development',
   output: {
-    path: './build/',
+    path: path.join(__dirname, '/build/'),
     filename: 'bundle.js'
   },
   module: {
@@ -19,7 +21,7 @@ export default {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: path.join(__dirname, '/src/index.html')
     }),
     new LiveReloadPlugin()
   ]
