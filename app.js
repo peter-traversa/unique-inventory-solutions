@@ -1,7 +1,7 @@
-import express from 'express';
-import webpackMiddleware from 'webpack-dev-middleware';
-import webpack from 'webpack';
-import webpackConfig from './webpack.config.babel.js/index.js';
+const express = require("express");
+const webpackMiddleware = require('webpack-dev-middleware');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.babel.js');
 const app = express();
 const port = 3000;
 

@@ -1,9 +1,9 @@
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import LiveReloadPlugin from 'webpack-livereload-plugin';
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 const path = require('path');
 
-export default {
+module.exports = {
   entry: path.join(__dirname, '/src/index.js'),
   mode: 'development',
   output: {
