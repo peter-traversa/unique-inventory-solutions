@@ -19,10 +19,10 @@ module.exports = {
       }
     ]
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: path.join(__dirname, '/src/index.html')
-  //   }),
-  //   new LiveReloadPlugin()
-  // ]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, '/src/index.html')
+    }),
+    new LiveReloadPlugin()
+  ]
 };
