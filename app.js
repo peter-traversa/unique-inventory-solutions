@@ -3,7 +3,7 @@ const webpackMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.babel.js');
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.use(webpackMiddleware(webpack(webpackConfig)));
 app.get('/', (req, res) => res.sendFile('index.html', { root: path.join(__dirname, './build')}));
