@@ -1,6 +1,6 @@
 
 branch-defaults:
-  circleCI:
+  eslint:
     environment: null
     group_suffix: null
 environment-defaults:
