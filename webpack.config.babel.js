@@ -1,7 +1,7 @@
 // const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-require('dotenv').config()
+require('dotenv').config();
 
 
 module.exports = {
@@ -9,20 +9,20 @@ module.exports = {
   mode: 'development',
   output: {
     path: path.join(__dirname, '/build/'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
       {
         use: 'babel-loader',
         test: /\.js$/,
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '/src/index.html')
+      template: path.join(__dirname, '/src/index.html'),
     }),
-  ]
+  ],
 };
