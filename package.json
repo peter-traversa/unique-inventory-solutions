@@ -34,6 +34,9 @@
     "nodemon": "^1.18.9",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "webpack": "^4.28.3",
     "webpack-dev-middleware": "^3.6.0",
     "webpack-livereload-plugin": "^2.2.0"
